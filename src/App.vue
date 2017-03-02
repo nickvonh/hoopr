@@ -98,12 +98,15 @@ export default {
 @import './stylus/resources.styl'
 #app
     height 100vh
+    width 100vw
     background bgGray
     flexbox()
     flex-direction(column)
     align-items(center)
     justify-content(space-around)
+    overflow scroll
     .row, .topbar
+        min-width 800px
         width 80%
         grid('row','center','')
         justify-content(space-between)
@@ -113,11 +116,11 @@ export default {
             background white
     .topbar
         height 7%
-        min-height 66px
+        min-height 50px
+        cursor default
     .row
         height 40%
-        min-width 1080px
-        min-height 308px
+        min-height 280px
 .quarter
     cell(1,4,g:40)
     height 100%

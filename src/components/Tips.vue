@@ -49,6 +49,7 @@ export default {
     .contents
         grid('column','','')
         flex(1)
+        height 84%
         *
             border-radius 4px
             text-align center
@@ -67,6 +68,7 @@ export default {
             text-transform uppercase
             font-size .9em
             font-weight 600
+            cursor pointer
         .primary
             background blu
         .secondary

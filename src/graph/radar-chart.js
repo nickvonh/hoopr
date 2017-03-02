@@ -9,7 +9,7 @@ import d3 from 'd3'
 
 export default function(id, data, options) {
 	var cfg = {
-	 w: 200,				//Width of the circle
+	 w: 250,				//Width of the circle
 	 h: 200,				//Height of the circle
 	 margin: {top: 100, right: 150, bottom: 100, left: 150}, //The margins of the SVG
 	 levels: 5,				//How many levels or inner circles should there be drawn
@@ -112,18 +112,14 @@ export default function(id, data, options) {
 		.style("stroke-width", "2px");
 
 	//Append the labels at each axis
-	axis.append("rect")
-        .attr("width", "80px")
-        .attr("height", "50px")
-        .attr("x", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice*i - Math.PI/2); })
-        .attr("y", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.sin(angleSlice*i - Math.PI/2); })
-        .style("fill", "white")
-        .append("text")
+	axis.append("text")
         .style("fill", "#2e87bd")
 		.attr("class", "legend")
+		.attr("x", function(d, i){ return rScale(5*1.7) * Math.cos(angleSlice*i - Math.PI/2); })
+		.attr("y", function(d, i){ return rScale(5*1.5) * Math.sin(angleSlice*i - Math.PI/2); })
 		.style("font-size", "15px")
         .style("font-weight", "600")
-		.attr("text-anchor", "middle")
+		.attr("text-anchor", "left")
 		.attr("dy", "0.35em")
 		.text(function(d){return d})
 		.call(wrap, cfg.wrapWidth);

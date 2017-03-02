@@ -41,11 +41,11 @@ export default {
         flex(1)
         margin 1px 0
         padding 0 5%
-        cursor pointer
         text-transform uppercase
         font-size .8em
         font-weight 600
         background white
+        cursor pointer
         &:first-of-type
             background oj !important
             color white !important
@@ -63,7 +63,6 @@ export default {
         flex(1)
         margin 1px 0
         padding 0 5%
-        cursor pointer
         text-transform uppercase
         font-size .8em
         font-weight 600
@@ -75,4 +74,8 @@ export default {
             width 50%
             flexbox()
             justify-content(space-between)
+            span
+                cursor pointer
+        i
+            cursor pointer
 </style>

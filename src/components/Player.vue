@@ -107,7 +107,7 @@ export default {
                 z-index 1
                 background-repeat no-repeat
                 background-size 40%
-                background-position 120% 150%
+                background-position 120% 120%
                 opacity .4
             .img
                 width 150px
